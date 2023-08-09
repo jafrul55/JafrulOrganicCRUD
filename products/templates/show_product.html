@@ -1,0 +1,49 @@
+{% extends 'base.html'%} {% block content %}
+<h1 style="text-align: center; color: white">Product List</h1>
+<div style="width: 80%; margin: auto">
+  {% if Show %}
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Product No.</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Farmer Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Product Collection Date</th>
+        <th scope="col">Product Update Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in Show%}
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.product_name}}</td>
+        <td>{{item.farmer_name}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.collected_food}}</td>
+        <td>{{item.last_collected}}</td>
+        <td>
+          <a
+            href="{% url 'Editproduct' id=item.id%}"
+            class="btn btn-warning btn-sm"
+            type="button"
+            >Edit</a
+          >
+          <a
+            href="{% url 'Deleteproduct' id=item.id%}"
+            class="btn btn-danger btn-sm"
+            type="button"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <h1 style="text-align: center; color: white">There is no data available!</h1>
+  {% endif %}
+</div>
+
+{% endblock content %}

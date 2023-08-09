@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JafrulOrganic</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color:#1D2A35">
+    <nav class="navbar navbar-expand-lg" style="background-color: #36d936">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand fw-semibolder fs-3"
+          style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+            color:#FF0000";
+          "
+          href="{% url 'Home'%}"
+        >
+          <img
+            src="https://storage.cloudconvert.com/tasks/9dfeab6e-c2b0-409b-aef3-dc46d066ac84/Capture.jpg?AWSAccessKeyId=cloudconvert-production&Expires=1691638703&Signature=zrSQwGhrrsiAApkI0J0rEsZxRcs%3D&response-content-disposition=inline%3B%20filename%3D%22Capture.jpg%22&response-content-type=image%2Fjpeg"
+            alt=""
+            style="width: 150px; height: 50px; border-radius: 25px"
+          />
+          JafrulOrganic</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium fs-5">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'Home'%}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'Storeproduct'%}"
+                >Store Product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'Showproduct'%}"
+                >See Product</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block content%}
+    <div>
+      <h1 style="text-align: center; color: white">Home Page</h1>
+      <h2 style="text-align: center; color: cadetblue">
+        Welcome To our Home Page
+      </h2>
+      <h2 style="text-align: center; color: #098e93">
+        Please Read Below Article?
+      </h2>
+      <p style="color: white;">
+        WHAT IS ORGANIC FOOD? In order to receive a USDA organic label, produce
+        must limit pesticide use to a certain level and only certain types of
+        pesticides may be used. Other organic foods like dairy and meat must be
+        produced without hormones or antibiotics, as relevant. While you can’t
+        know exactly where it’s been and how it’s been grown, organic food is
+        the second-best option to growing your own produce. Food grown
+        non-organically is referred to as conventionally grown. Conventional
+        food may contain pesticides under a more liberal legal limit.
+        Conventional dairy and meat may be produced using USDA-approved
+        antibiotics and hormones. TYPES OF ORGANIC FOOD When you think of
+        organic food, your mind probably goes to fruits and vegetables first.
+        While they may be the most common organic offerings, there are also
+        benefits to eating organic dairy, meat, fish, and seafood. All of these
+        types of organic food are readily available in grocery stores. ORGANIC
+        FRUITS Fruit is one of the most common types of organic food.
+        Conventional fruit tends to have a heavy pesticide residue, which makes
+        them a good candidate for choosing organic. Since insects are attracted
+        to sweet, fruity smells, don’t expect your organic fruit to look
+        “perfect.” While farmers will choose the best produce to sell, the
+        absence of pesticides means that they may have blemishes or marks on
+        their skin. However, they will taste just as good if not better than
+        conventional fruit. ORGANIC VEGETABLES Vegetables are another common
+        organic purchase. Since their peels and skins are often eaten, they are
+        directly subjected to pesticide sprays. This means that eating organic
+        vegetables can make a big difference in the amount of pesticide residue
+        you and your family are exposed to.
+      </p>
+    </div>
+    {% endblock content%}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
